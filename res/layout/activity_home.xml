@@ -1,0 +1,218 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/title_color"
+    tools:context="com.BridzHealth.DoctorsDetailsActivity" >
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_color_dark"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_rounded_corners"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:hint="Search doctor by name"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/red_cursor" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/find_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Find"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/find_btn"
+        android:layout_marginBottom="2dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="on date"
+            android:textColor="@color/text_gray"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/date_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5 August, 2016"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/date_layout"
+        android:layout_below="@id/search_layout"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/dental_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:clickable="true"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/dental_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="DENTAL"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/dental_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/dental_txt"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dental_red" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dermotologist_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:clickable="true"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/dermotologist_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="DERMOTOLOGIST"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/dermotologist_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/dermotologist_txt"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dermotologist_red" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/psychiatrist_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:clickable="true"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/psychiatrist_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="PHYCHIATRIST"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/psychiatrist_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/psychiatrist_txt"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/psycriatist_red" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/opthalmology_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:clickable="true"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/opthalmology_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="OPTHALMOLOGY"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/opthalmology_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/opthalmology_txt"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/opthomology_red" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
